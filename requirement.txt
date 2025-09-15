@@ -1,4 +1,4 @@
-streamlit==1.31.1
+streamlit
 pymongo[srv]
-pandas==2.2.1
-xlsxwriter==3.2.0
+pandas
+xlsxwriter
