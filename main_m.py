@@ -24,17 +24,6 @@ st.title("📋 User Information Form")
 if "logged_in" not in st.session_state:
     st.session_state.logged_in = False
 
-# --- Sidebar Admin Login ---
-with st.sidebar:
-    st.header("🔐 Admin Login")
-    password_input = st.text_input("Enter admin password", type="password")
-    if st.button("Login"):
-        if password_input == st.secrets["admin_password"]:
-            st.session_state.logged_in = True
-            st.success("Access granted")
-        else:
-            st.error("Incorrect password")
-
 # --- Email Validation ---
 def is_valid_email(email):
     return re.match(r"[^@]+@[^@]+\.[^@]+", email)
